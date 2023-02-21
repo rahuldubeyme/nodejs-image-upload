@@ -8,7 +8,7 @@ const PORT = 3000;
 
 app.use(express.static('public'));
 
-app.post('/upload', upload.single('photo'), (req, res) => {
+app.post('/upload', upload.single('photos'), (req, res) => {
     if(req.file) {
         console.log('ureq.file-==>',req.file);
         res.json(req.file);
